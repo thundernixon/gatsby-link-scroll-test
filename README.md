@@ -4,6 +4,8 @@ This repo demonstrates two current issues with Gatsby and scrolling/page height.
 
 ## Issue 1: Gatsby Link not linking to the top of each page
 
+![Issue 1: Link to middle](docs/gatsby-scroll-issue-1.gif)
+
 This issue is already documented: [[v2] Navigating to previously visited pages with <Link> retains scroll position](https://github.com/gatsbyjs/gatsby/issues/7454.).
 
 In this site, the issue is apparent through two interactions:
@@ -12,6 +14,8 @@ In this site, the issue is apparent through two interactions:
 2. Scroll to the middle or bottom of a project page, then go to another project page via the top menu.
 
 ## Issue 2: page height not shrinking with content
+
+![Issue 2: Page not shrinking with content](docs/gatsby-scroll-issue-2.gif)
 
 I haven't found prior documentation of the second issue, but possibly I'm not searching in the right way.
 
