@@ -37,15 +37,13 @@ const StyledLink = styled(Link)`
 class IndexPage extends Component {
 	render() {
 		return (
-			<GlobalLayout>
-				<Wrapper>
-					<StyledPage className="page-wrapper">
-						<SEO title="Home" keywords={['typemedia', 'type design', '2018', 'KABK']} />
-						<h1>Welcome home</h1>
-						<StyledLink to="/1-one">Go to Font1</StyledLink>
-					</StyledPage>
-				</Wrapper>
-			</GlobalLayout>
+			<Wrapper>
+				<StyledPage className="page-wrapper">
+					<SEO title="Home" keywords={['typemedia', 'type design', '2018', 'KABK']} />
+					<h1>Welcome home</h1>
+					<StyledLink to="/1-one">Go to Font1</StyledLink>
+				</StyledPage>
+			</Wrapper>
 		);
 	}
 }
