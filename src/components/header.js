@@ -187,7 +187,7 @@ export default class Header extends React.Component {
 									<span id="shortName"> Test </span>
 								)}
 							</TransitionLink>
-							<StyledIcon onClick={this.toggleMenu} menuOpen={this.state.menuOpen}>
+							<StyledIcon onClick={this.toggleMenu} onFocus={this.toggleMenu} menuOpen={this.state.menuOpen}>
 								<IconMenu />
 							</StyledIcon>
 						</SiteTitle>

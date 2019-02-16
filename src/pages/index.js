@@ -9,8 +9,8 @@ import GlobalLayout from '../layouts/global-layout';
 // import Page from '../components/page'
 import SEO from '../components/seo';
 
-import colors from '../_vars/colors';
-import sizes from '../_vars/sizes';
+// import colors from '../_vars/colors';
+// import sizes from '../_vars/sizes';
 
 // import './global.scss'
 
