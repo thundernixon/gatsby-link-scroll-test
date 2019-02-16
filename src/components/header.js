@@ -1,5 +1,5 @@
 import React from 'react';
-import TransitionLink, { TransitionPortal } from 'gatsby-plugin-transition-link';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import NavButton from './nav-button';
 import IconMenu from './icon-menu';
@@ -163,40 +163,30 @@ export default class Header extends React.Component {
 	render() {
 		// <TransitionPortal>
 		return (
-			<TransitionPortal>
-				<Nav>
-					<MenuScrim menuOpen={this.state.menuOpen} onClick={this.toggleMenu} />
-					<Menu menuOpen={this.state.menuOpen}>
-						<SiteTitle menuOpen={this.state.menuOpen}>
-							<TransitionLink
-								onClick={this.state.menuOpen ? this.toggleMenu : false}
-								fullName={this.state.fullName}
-								menuOpen={this.state.menuOpen}
-								to="/"
-								exit={{
-									length: 1
-								}}
-								entry={{
-									delay: 0
-								}}>
-								{/* {this.props.title} */}
-								{/* if open, use long name. If closed, use short name. */}
-								{this.state.fullName ? (
-									<span id="fullName"> {this.props.title} </span>
-								) : (
-									<span id="shortName"> Test </span>
-								)}
-							</TransitionLink>
-							<StyledIcon onClick={this.toggleMenu} onFocus={this.toggleMenu} menuOpen={this.state.menuOpen}>
-								<IconMenu />
-							</StyledIcon>
-						</SiteTitle>
-						<Names>
-							<ul onClick={this.toggleMenu}> {this.props.children} </ul>
-						</Names>
-					</Menu>
-				</Nav>
-			</TransitionPortal>
+			<Nav>
+				<MenuScrim menuOpen={this.state.menuOpen} onClick={this.toggleMenu} />
+				<Menu menuOpen={this.state.menuOpen}>
+					<SiteTitle menuOpen={this.state.menuOpen}>
+						<Link
+							onClick={this.state.menuOpen ? this.toggleMenu : false}
+							fullName={this.state.fullName}
+							menuOpen={this.state.menuOpen}
+							to="/">
+							{this.state.fullName ? (
+								<span id="fullName"> {this.props.title} </span>
+							) : (
+								<span id="shortName"> Test </span>
+							)}
+						</Link>
+						<StyledIcon onClick={this.toggleMenu} onFocus={this.toggleMenu} menuOpen={this.state.menuOpen}>
+							<IconMenu />
+						</StyledIcon>
+					</SiteTitle>
+					<Names>
+						<ul onClick={this.toggleMenu}> {this.props.children} </ul>
+					</Names>
+				</Menu>
+			</Nav>
 		);
 	}
 }
