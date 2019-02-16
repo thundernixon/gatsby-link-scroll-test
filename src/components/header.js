@@ -158,8 +158,6 @@ export default class Header extends React.Component {
 		}, menuTransitionTime * 1000);
 	};
 
-	// create function(?) to retract site abbreviation, then insert new one, with slight delay
-
 	render() {
 		// <TransitionPortal>
 		return (
